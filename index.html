@@ -8,117 +8,132 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>LeetCode Progress Tracker</title>
+    <title>LeetCode Progress Dashboard</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div>
-            <h1>LeetCode Progress Dashboard</h1>
+<header class="header">
+    <div>
+        <h1>LeetCode Progress Dashboard</h1>
+        <p>Student coding activity and leaderboard</p>
+    </div>
 
-            <p>
-                Student coding activity and leaderboard
-            </p>
-        </div>
+    <div class="updated-box">
+        <span>Last updated</span>
+        <strong id="lastUpdated">Loading...</strong>
+    </div>
+</header>
 
-        <div class="updated-box">
-            <span>Last updated</span>
+<main class="container">
 
-            <strong id="lastUpdated">
-                Loading...
-            </strong>
-        </div>
-    </header>
+    <section class="metrics">
 
-    <main class="container">
+        <article class="metric-card">
+            <span>Total Students</span>
+            <strong id="totalStudents">0</strong>
+        </article>
 
-        <section class="metrics">
+        <article class="metric-card">
+            <span>Total Problems</span>
+            <strong id="totalProblems">0</strong>
+        </article>
 
-            <article class="metric-card">
-                <span>Total Students</span>
-                <strong id="totalStudents">0</strong>
-            </article>
+        <article class="metric-card">
+            <span>Solved Today</span>
+            <strong id="solvedToday">0</strong>
+        </article>
 
-            <article class="metric-card">
-                <span>Total Problems</span>
-                <strong id="totalProblems">0</strong>
-            </article>
+        <article class="metric-card">
+            <span>Last 7 Days</span>
+            <strong id="lastSevenDays">0</strong>
+        </article>
 
-            <article class="metric-card">
-                <span>Solved Today</span>
-                <strong id="solvedToday">0</strong>
-            </article>
+    </section>
 
-            <article class="metric-card">
-                <span>Last 7 Days</span>
-                <strong id="lastSevenDays">0</strong>
-            </article>
+    <section class="toolbar">
 
-        </section>
-
-        <section class="toolbar">
-
-            <label for="searchInput">
-                Search student
-            </label>
+        <div class="search-box">
+            <label for="searchInput">Search student</label>
 
             <input
                 id="searchInput"
                 type="search"
                 placeholder="Search name, register number or username"
             >
+        </div>
 
-        </section>
+        <div class="download-buttons">
+            <button id="downloadCsvButton" type="button">
+                Download CSV
+            </button>
 
-        <section class="table-container">
+            <button id="downloadExcelButton" type="button">
+                Download Excel
+            </button>
 
-            <table>
+            <button id="downloadPdfButton" type="button">
+                Download PDF
+            </button>
+        </div>
 
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Register Number</th>
-                        <th>Student Name</th>
-                        <th>LeetCode</th>
-                        <th>Total</th>
-                        <th>Today</th>
-                        <th>Last 7 Days</th>
-                        <th>Easy</th>
-                        <th>Medium</th>
-                        <th>Hard</th>
-                        <th>Current Streak</th>
-                        <th>Last Problem</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+    </section>
 
-                <tbody id="studentTableBody">
-                    <tr>
-                        <td colspan="13">
-                            Loading student data...
-                        </td>
-                    </tr>
-                </tbody>
+    <section
+        id="printArea"
+        class="table-container"
+    >
 
-            </table>
+        <div class="print-heading">
+            <h2>LeetCode Progress Dashboard</h2>
+            <p id="printUpdatedAt"></p>
+        </div>
 
-        </section>
+        <table id="studentTable">
 
-        <p
-            id="message"
-            class="message"
-            aria-live="polite"
-        ></p>
+            <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Register Number</th>
+                <th>Student Name</th>
+                <th>LeetCode Username</th>
+                <th>Total</th>
+                <th>Today</th>
+                <th>Last 7 Days</th>
+                <th>Easy</th>
+                <th>Medium</th>
+                <th>Hard</th>
+                <th>Current Streak</th>
+                <th>Longest Streak</th>
+                <th>Last Problem</th>
+                <th>Last Solved</th>
+                <th>Status</th>
+            </tr>
+            </thead>
 
-    </main>
+            <tbody id="studentTableBody">
+            <tr>
+                <td colspan="15">
+                    Loading student data...
+                </td>
+            </tr>
+            </tbody>
 
-    <script src="script.js"></script>
+        </table>
+
+    </section>
+
+    <p
+        id="message"
+        class="message"
+        aria-live="polite"
+    ></p>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
