@@ -1,0 +1,18 @@
+# Private student data
+Students.xlsx
+
+# Local database
+tracker.db
+
+# Python environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local automation
+push_updates.bat
+
+# Logs
+tracker_log.txt
