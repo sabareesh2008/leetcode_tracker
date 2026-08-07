@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f7fb;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 5%;
+    background: #172554;
+    color: white;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+}
+
+.header p {
+    margin: 0;
+    color: #dbeafe;
+}
+
+.updated-box {
+    min-width: 180px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.updated-box span,
+.updated-box strong {
+    display: block;
+}
+
+.updated-box span {
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #dbeafe;
+}
+
+.container {
+    width: min(96%, 1500px);
+    margin: 24px auto;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    padding: 20px;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+    background: white;
+}
+
+.metric-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: #64748b;
+}
+
+.metric-card strong {
+    font-size: 30px;
+    color: #172554;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.toolbar label {
+    font-weight: 600;
+}
+
+.toolbar input {
+    width: min(100%, 440px);
+    padding: 11px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+th,
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #1e3a8a;
+    color: white;
+}
+
+tbody tr:hover {
+    background: #eff6ff;
+}
+
+.profile-link {
+    color: #1d4ed8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+}
+
+.status-success {
+    font-weight: 600;
+    color: #15803d;
+}
+
+.status-error {
+    color: #b91c1c;
+}
+
+.message {
+    margin-top: 14px;
+    color: #b91c1c;
+}
+
+@media (max-width: 900px) {
+    .metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .toolbar input {
+        width: 100%;
+    }
+}

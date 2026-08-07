@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LeetCode Progress Tracker</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>LeetCode Progress Dashboard</h1>
+
+            <p>
+                Student coding activity and leaderboard
+            </p>
+        </div>
+
+        <div class="updated-box">
+            <span>Last updated</span>
+
+            <strong id="lastUpdated">
+                Loading...
+            </strong>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="metrics">
+
+            <article class="metric-card">
+                <span>Total Students</span>
+                <strong id="totalStudents">0</strong>
+            </article>
+
+            <article class="metric-card">
+                <span>Total Problems</span>
+                <strong id="totalProblems">0</strong>
+            </article>
+
+            <article class="metric-card">
+                <span>Solved Today</span>
+                <strong id="solvedToday">0</strong>
+            </article>
+
+            <article class="metric-card">
+                <span>Last 7 Days</span>
+                <strong id="lastSevenDays">0</strong>
+            </article>
+
+        </section>
+
+        <section class="toolbar">
+
+            <label for="searchInput">
+                Search student
+            </label>
+
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Search name, register number or username"
+            >
+
+        </section>
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Register Number</th>
+                        <th>Student Name</th>
+                        <th>LeetCode</th>
+                        <th>Total</th>
+                        <th>Today</th>
+                        <th>Last 7 Days</th>
+                        <th>Easy</th>
+                        <th>Medium</th>
+                        <th>Hard</th>
+                        <th>Current Streak</th>
+                        <th>Last Problem</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTableBody">
+                    <tr>
+                        <td colspan="13">
+                            Loading student data...
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <p
+            id="message"
+            class="message"
+            aria-live="polite"
+        ></p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
