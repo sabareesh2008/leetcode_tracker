@@ -1,18 +1,24 @@
-# Private student data
+# Student input - PRIVATE
 Students.xlsx
 
-# Local database
+# Database - PRIVATE
 tracker.db
 
 # Python environment
 venv/
 
+# Python tracker source
+tracker.py
+
+# Python requirements
+requirements.txt
+
+# Local automatic GitHub uploader
+push_updates.bat
+
 # Python cache
 __pycache__/
 *.pyc
-
-# Local automation
-push_updates.bat
 
 # Logs
 tracker_log.txt
